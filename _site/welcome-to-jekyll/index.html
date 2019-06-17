@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professions et Catégories Socioprofessionnelles</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="stylesheet" href="/assets/styles/theme.css">
+  <link rel="stylesheet" href="/assets/styles/font-awesome.css">
+  <link rel="stylesheet" href="/assets/styles/custom.css">
+
+  <script type="text/javascript" src="/assets/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/assets/scripts/bootstrap.js"></script>
+  <script type="text/javascript" src="/assets/scripts/lunr.js"></script>
+  <script type="text/javascript" src="/assets/scripts/search.js"></script>
+  <script type="text/javascript" src="/assets/scripts/fullscreensearch.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-fire"></i> Professions et Catégories Socioprofessionnelles</a>
+          <!--<a class="navbar-brand" href="/"><img class="img-brand" src="/assets/images/starterlog.png"> Starter Log</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/discover/">Découvrir la PCS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explorer la PCS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="#">Explorer la PCS</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Les classes et sous-classes d'emploi</a></li>
+                <li><a href="#">Les groupes (et sous-groupes) de ménages </a></li>
+                <li><a href="#">Les rubriques ad-hoc de professions</a></li>
+                <li><a href="#">Les professions du numérique </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Theme <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/theme">Theme</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Templates</li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/project">Project</a></li>
+              </ul>
+            </li>
+            <li><a href="#search">Rechercher sur le site</a></li>
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <br>
+    <div id="search">
+      <form action="/search/" method="get">
+        <input type="search" id="search-box" name="query" placeholder="Recherche par mots clés">
+        <button type="submit" class="btn btn-lg btn-default"><i class="fa fa-lg fa-search"></i> Rechercher</button>
+      </form>
+    </div>
+
+      </div>
+
+      <div class="wrapper container">
+        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+
+      </div>
+
+      <div class="footer">
+        <div class="container">
+    <div class="row-footer">
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><a href="/discover/"><i class="fa fa-github"></i>Découvrir la PCS</a><li>
+                    <li><a href="/discover/history/">Histoire</a></li>
+                    <li><a href="/discover/guides/">Guides de documentation</a></li>
+                    <li><a href="#">Nomenclatures françaises</a></li>
+                    <li><a href="#">Nomenclatures étrangères</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-archive"></i> Projects<li>
+                    <li><a href="#">Project jhvbj</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-cogs"></i> Services<li>
+                    <li><a href="#">WOUHOU</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Presentations</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-file-text"></i> Documentation<li>
+                    <li><a href="#">YEAH MAN</a></li>
+                    <li><a href="#">API Docs</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

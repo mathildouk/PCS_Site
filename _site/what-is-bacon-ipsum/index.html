@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professions et Catégories Socioprofessionnelles</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="stylesheet" href="/assets/styles/theme.css">
+  <link rel="stylesheet" href="/assets/styles/font-awesome.css">
+  <link rel="stylesheet" href="/assets/styles/custom.css">
+
+  <script type="text/javascript" src="/assets/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/assets/scripts/bootstrap.js"></script>
+  <script type="text/javascript" src="/assets/scripts/lunr.js"></script>
+  <script type="text/javascript" src="/assets/scripts/search.js"></script>
+  <script type="text/javascript" src="/assets/scripts/fullscreensearch.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-fire"></i> Professions et Catégories Socioprofessionnelles</a>
+          <!--<a class="navbar-brand" href="/"><img class="img-brand" src="/assets/images/starterlog.png"> Starter Log</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/discover/">Découvrir la PCS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explorer la PCS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="#">Explorer la PCS</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Les classes et sous-classes d'emploi</a></li>
+                <li><a href="#">Les groupes (et sous-groupes) de ménages </a></li>
+                <li><a href="#">Les rubriques ad-hoc de professions</a></li>
+                <li><a href="#">Les professions du numérique </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Theme <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/theme">Theme</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Templates</li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/project">Project</a></li>
+              </ul>
+            </li>
+            <li><a href="#search">Rechercher sur le site</a></li>
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <br>
+    <div id="search">
+      <form action="/search/" method="get">
+        <input type="search" id="search-box" name="query" placeholder="Recherche par mots clés">
+        <button type="submit" class="btn btn-lg btn-default"><i class="fa fa-lg fa-search"></i> Rechercher</button>
+      </form>
+    </div>
+
+      </div>
+
+      <div class="wrapper container">
+        <h1 id="section">SECTION</h1>
+<p>Bacon ipsum dolor amet andouille frankfurter est tempor shankle flank brisket officia, enim et boudin ham quis. Leberkas qui pork mollit aliquip drumstick dolore fugiat prosciutto do velit est. Reprehenderit pork capicola fatback cillum alcatra brisket doner, minim dolor irure ex jerky tenderloin prosciutto. Beef ribs pancetta tail leberkas shank elit ham hock venison occaecat andouille ham doner magna. Irure jerky landjaeger ut commodo nulla.</p>
+
+<h3 id="highlight">HIGHLIGHT</h3>
+<p><code class="highlighter-rouge">​html
+&lt;a href="#"&gt;Hello world&lt;/a&gt;
+</code>​</p>
+
+<h3 id="code-block">CODE BLOCK</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">show</span>
+  <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+  <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+    <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb</span>
+    <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@widget</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<h3 id="paragraphs">PARAGRAPHS</h3>
+<p>Id aute laborum consectetur t-bone in prosciutto cillum kevin. Drumstick corned beef beef venison, ad exercitation frankfurter capicola. Fatback t-bone pork chop ullamco est tempor commodo brisket quis meatball salami ground round capicola. Kevin picanha shoulder ut turducken dolore.</p>
+
+<p>Ad doner culpa tail ea laboris labore. Corned beef excepteur enim, ground round biltong aliquip pork belly pastrami meatball short loin ham hock sed. Flank beef rump, esse quis labore cow nulla excepteur tempor. Nisi boudin cupidatat tenderloin, filet mignon rump ut. Minim leberkas velit kevin aliquip. Shankle capicola cupim lorem dolore esse chicken turkey frankfurter cillum laboris short ribs.</p>
+
+<p>Minim chuck hamburger rump boudin. Strip steak ut shank sint incididunt. Commodo dolore drumstick, tempor tenderloin meatball picanha non boudin fatback velit short ribs. Sirloin fatback kevin meatloaf pork. Do non pork bacon irure drumstick pancetta t-bone et ex elit sausage labore.</p>
+
+<p>Rump capicola pig nulla dolore. Ex salami filet mignon reprehenderit turkey in kevin tail dolore ham excepteur ut nisi bresaola proident. Sirloin elit shoulder, nostrud aliqua strip steak short loin ullamco salami magna kevin eiusmod dolore consectetur prosciutto. Swine minim duis salami. Doner tenderloin non nostrud laboris. Velit excepteur laborum nisi, aliqua short ribs ut elit ham swine anim ball tip sint minim bresaola.</p>
+
+<p>Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>
+
+
+      </div>
+
+      <div class="footer">
+        <div class="container">
+    <div class="row-footer">
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><a href="/discover/"><i class="fa fa-github"></i>Découvrir la PCS</a><li>
+                    <li><a href="/discover/history/">Histoire</a></li>
+                    <li><a href="/discover/guides/">Guides de documentation</a></li>
+                    <li><a href="#">Nomenclatures françaises</a></li>
+                    <li><a href="#">Nomenclatures étrangères</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-archive"></i> Projects<li>
+                    <li><a href="#">Project jhvbj</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-cogs"></i> Services<li>
+                    <li><a href="#">WOUHOU</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Presentations</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-file-text"></i> Documentation<li>
+                    <li><a href="#">YEAH MAN</a></li>
+                    <li><a href="#">API Docs</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

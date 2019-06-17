@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professions et Catégories Socioprofessionnelles</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="stylesheet" href="/assets/styles/theme.css">
+  <link rel="stylesheet" href="/assets/styles/font-awesome.css">
+  <link rel="stylesheet" href="/assets/styles/custom.css">
+
+  <script type="text/javascript" src="/assets/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/assets/scripts/bootstrap.js"></script>
+  <script type="text/javascript" src="/assets/scripts/lunr.js"></script>
+  <script type="text/javascript" src="/assets/scripts/search.js"></script>
+  <script type="text/javascript" src="/assets/scripts/fullscreensearch.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-fire"></i> Professions et Catégories Socioprofessionnelles</a>
+          <!--<a class="navbar-brand" href="/"><img class="img-brand" src="/assets/images/starterlog.png"> Starter Log</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/discover/">Découvrir la PCS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explorer la PCS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="#">Explorer la PCS</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Les classes et sous-classes d'emploi</a></li>
+                <li><a href="#">Les groupes (et sous-groupes) de ménages </a></li>
+                <li><a href="#">Les rubriques ad-hoc de professions</a></li>
+                <li><a href="#">Les professions du numérique </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Theme <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/theme">Theme</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Templates</li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/project">Project</a></li>
+              </ul>
+            </li>
+            <li><a href="#search">Rechercher sur le site</a></li>
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <br>
+    <div id="search">
+      <form action="/search/" method="get">
+        <input type="search" id="search-box" name="query" placeholder="Recherche par mots clés">
+        <button type="submit" class="btn btn-lg btn-default"><i class="fa fa-lg fa-search"></i> Rechercher</button>
+      </form>
+    </div>
+
+      </div>
+
+      <div class="wrapper container">
+        <form action="/search/" method="get">
+  <label for="search-box">Search</label>
+  <input type="text" id="search-box" name="query">
+  <input type="submit" value="search">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    
+      "welcome-to-jekyll": {
+        "title": "Welcome to Jekyll!",
+        "author": "",
+        "category": "",
+        "content": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.Jekyll also offers powerful support for code snippets:def print_hi(name)  puts \"Hi, #{name}\"endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT.Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk.",
+        "url": "/welcome-to-jekyll/"
+      }
+      ,
+    
+      "sample-presentation": {
+        "title": "Sample Presentation",
+        "author": "",
+        "category": "",
+        "content": "## Slide 1The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) whichenables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.## Slide 2The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) whichenables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.## Slide 3The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) whichenables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.",
+        "url": "/sample-presentation/"
+      }
+      ,
+    
+      "what-is-lorem-ipsum": {
+        "title": "What is Lorem Ipsum?",
+        "author": "",
+        "category": "",
+        "content": "SECTIONLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel aliquam lorem. Donec ultricies massa vel bibendum rutrum. Duis elementum eu ipsum a ultrices. Curabitur efficitur mi a magna tempus, a tempus tortor tempor. Pellentesque finibus lorem et ligula finibus ornare. Morbi laoreet fringilla erat, a pretium nisi volutpat quis. Nullam id tempus lacus. Mauris elementum faucibus lectus in finibus.HIGHLIGHT​html&lt;a href=\"#\"&gt;Hello world&lt;/a&gt;​CODE BLOCKdef show  @widget = Widget(params[:id])  respond_to do |format|    format.html # show.html.erb    format.json { render json: @widget }  endendPARAGRAPHSDuis eros quam, feugiat sed consequat eu, rutrum et ipsum. Suspendisse tempor nibh leo, sit amet convallis arcu luctus at. Praesent aliquam scelerisque aliquet. Duis eget lacus laoreet, tristique ex semper, molestie sem. In feugiat sem nunc, eu lacinia mauris dictum non. Curabitur at eleifend lectus. Nam auctor fermentum neque, sit amet tincidunt libero sodales ac. Duis venenatis volutpat dui, vitae dapibus enim gravida id. Nulla elementum libero felis, at tristique massa ornare eu. Fusce scelerisque fermentum consequat. Suspendisse massa libero, posuere suscipit tellus eu, euismod facilisis ante.Morbi quis lacus sit amet tortor feugiat lacinia id ut libero. Donec tristique auctor lacinia. Sed consectetur commodo lectus, vitae pharetra urna lobortis eget. Pellentesque venenatis nisi nibh, quis vehicula nibh iaculis ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in tristique lectus. Nam at nibh a ligula scelerisque consectetur. Vivamus tortor ante, euismod vitae ullamcorper at, cursus et mauris. Duis ante sem, maximus sed ultrices sed, aliquam vitae sem. Ut sit amet luctus ligula. Ut sed interdum orci, eget tincidunt mauris.Nunc eget imperdiet velit. Cras sit amet sapien nisi. Cras non tortor lobortis, venenatis neque a, posuere ex. Quisque tincidunt lacus sit amet felis efficitur blandit. Sed ac odio feugiat, suscipit turpis ultricies, scelerisque purus. Aenean vitae ligula luctus, consectetur velit eget, pretium orci. Proin sit amet tortor condimentum, ornare mi vel, aliquam sapien. Proin gravida libero ut metus faucibus, vitae lobortis elit porttitor. Quisque sit amet tellus tristique, dignissim turpis eu, lobortis purus. Cras non massa dolor. Aenean eget dolor a nisi laoreet tincidunt vitae vehicula lacus.Ut varius sodales lacus, vitae efficitur dui posuere sed. Curabitur cursus tempus enim ut aliquam. Vestibulum tempus accumsan metus et eleifend. Nunc commodo eu mi at pellentesque. Suspendisse nec elementum sapien, at egestas turpis. Vestibulum vestibulum aliquam augue in efficitur. Etiam arcu augue, luctus sed pharetra eget, pulvinar id ipsum. Nunc consequat accumsan eleifend. Ut placerat aliquam augue, vitae auctor elit ornare eu. In finibus est in porta mollis. Nam pulvinar, lacus eget mollis pharetra, massa magna rhoncus ligula, eu feugiat augue felis eget ex. Nulla ullamcorper fringilla malesuada.",
+        "url": "/what-is-lorem-ipsum/"
+      }
+      ,
+    
+      "what-is-bacon-ipsum": {
+        "title": "What is Bacon Ipsum?",
+        "author": "",
+        "category": "",
+        "content": "SECTIONBacon ipsum dolor amet andouille frankfurter est tempor shankle flank brisket officia, enim et boudin ham quis. Leberkas qui pork mollit aliquip drumstick dolore fugiat prosciutto do velit est. Reprehenderit pork capicola fatback cillum alcatra brisket doner, minim dolor irure ex jerky tenderloin prosciutto. Beef ribs pancetta tail leberkas shank elit ham hock venison occaecat andouille ham doner magna. Irure jerky landjaeger ut commodo nulla.HIGHLIGHT​html&lt;a href=\"#\"&gt;Hello world&lt;/a&gt;​CODE BLOCKdef show  @widget = Widget(params[:id])  respond_to do |format|    format.html # show.html.erb    format.json { render json: @widget }  endendPARAGRAPHSId aute laborum consectetur t-bone in prosciutto cillum kevin. Drumstick corned beef beef venison, ad exercitation frankfurter capicola. Fatback t-bone pork chop ullamco est tempor commodo brisket quis meatball salami ground round capicola. Kevin picanha shoulder ut turducken dolore.Ad doner culpa tail ea laboris labore. Corned beef excepteur enim, ground round biltong aliquip pork belly pastrami meatball short loin ham hock sed. Flank beef rump, esse quis labore cow nulla excepteur tempor. Nisi boudin cupidatat tenderloin, filet mignon rump ut. Minim leberkas velit kevin aliquip. Shankle capicola cupim lorem dolore esse chicken turkey frankfurter cillum laboris short ribs.Minim chuck hamburger rump boudin. Strip steak ut shank sint incididunt. Commodo dolore drumstick, tempor tenderloin meatball picanha non boudin fatback velit short ribs. Sirloin fatback kevin meatloaf pork. Do non pork bacon irure drumstick pancetta t-bone et ex elit sausage labore.Rump capicola pig nulla dolore. Ex salami filet mignon reprehenderit turkey in kevin tail dolore ham excepteur ut nisi bresaola proident. Sirloin elit shoulder, nostrud aliqua strip steak short loin ullamco salami magna kevin eiusmod dolore consectetur prosciutto. Swine minim duis salami. Doner tenderloin non nostrud laboris. Velit excepteur laborum nisi, aliqua short ribs ut elit ham swine anim ball tip sint minim bresaola.Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!",
+        "url": "/what-is-bacon-ipsum/"
+      }
+      
+    
+  };
+</script>
+<script src="/assets/scripts/lunr.js"></script>
+<script src="/assets/scripts/search.js"></script>
+
+      </div>
+
+      <div class="footer">
+        <div class="container">
+    <div class="row-footer">
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><a href="/discover/"><i class="fa fa-github"></i>Découvrir la PCS</a><li>
+                    <li><a href="/discover/history/">Histoire</a></li>
+                    <li><a href="/discover/guides/">Guides de documentation</a></li>
+                    <li><a href="#">Nomenclatures françaises</a></li>
+                    <li><a href="#">Nomenclatures étrangères</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-archive"></i> Projects<li>
+                    <li><a href="#">Project jhvbj</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-cogs"></i> Services<li>
+                    <li><a href="#">WOUHOU</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Presentations</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-file-text"></i> Documentation<li>
+                    <li><a href="#">YEAH MAN</a></li>
+                    <li><a href="#">API Docs</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

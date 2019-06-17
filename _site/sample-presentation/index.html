@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>
+      
+        Sample Presentation | Professions et Catégories Socioprofessionnelles
+      
+    </title>
+
+    <!--<meta name="author" content="" />-->
+
+    <!-- Description -->
+    
+      <meta name="description" content="A presentation slide for how to use reveal.js in Jekyll" />
+    
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel="stylesheet" href="/assets/styles/font-awesome.css"/>
+    <link rel="stylesheet" href="/assets/modules/reveal.js/css/reveal.css"/>
+
+    
+      <link rel="stylesheet" href="/assets/modules/reveal.js/css/theme/white.css" id="theme"/>
+    
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="/assets/modules/reveal.js/lib/css/zenburn.css"/>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '/assets/modules/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="canonical" href="http://localhost:4000/sample-presentation/"/>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+      .home {
+          color: #50514F;
+          font-family: verdana;
+          font-size: 100%;
+          padding-left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>
+        <a class="home" href="/"><i class="fa fa-2x fa-home"></i></a>
+      </p>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="">
+## Slide 1
+
+The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) which
+enables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.
+</section>
+
+<section data-markdown="">
+## Slide 2
+
+The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) which
+enables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.
+</section>
+
+<section data-markdown="">
+## Slide 3
+
+The [starterlog-theme](https://github.com/gadgetry-io/theme) includes [reveal.js](https://github.com/hakimel/reveal.js/) which
+enables you to create beautiful interactive slide decks in your Jekyll Posts using HTML and Markdown.
+</section>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/assets/modules/reveal.js/lib/js/head.min.js"></script>
+    <script type="text/javascript" src="/assets/modules/reveal.js/js/reveal.js"></script>
+    <script type="text/javascript" >
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        
+          transition: 'slide',
+        
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '/assets/modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/assets/modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/assets/modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/assets/modules/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '/assets/modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '/assets/modules/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
