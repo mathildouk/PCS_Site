@@ -40,30 +40,61 @@
         <div id="navbar" class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/discover/">Découvrir la PCS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Découvrir<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="/decouvrir/">Qu'est-ce que c'est ?</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/decouvrir/histoire">Principes, histoire, production, usages</a></li>
+                <li><a href="/decouvrir/guides">Les guides de documentation</a></li>
+                <li><a href="/decouvrir/#">L’articulation avec d’autres nomenclatures françaises</a></li>
+                <li><a href="/decouvrir/#">L’articulation avec d’autres nomenclatures étrangères</a></li>
+              </ul>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explorer la PCS<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-header"><a href="#">Explorer la PCS</a></li>
+                <li class="dropdown-header"><a href="/explorer">Explorer la PCS</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Les classes et sous-classes d'emploi</a></li>
-                <li><a href="#">Les groupes (et sous-groupes) de ménages </a></li>
+                <li><a href="#">Les groupes (et sous-groupes) de ménages</a></li>
                 <li><a href="#">Les rubriques ad-hoc de professions</a></li>
-                <li><a href="#">Les professions du numérique </a></li>
+                <li><a href="#">Les professions du numérique</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Theme <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Décrire<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/theme">Theme</a></li>
+                <li class="dropdown-header"><a href="/decrire">Quelle est cette rubrique ?</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Templates</li>
-                <li><a href="/features">Features</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/project">Project</a></li>
+                <li><a href="#">Portraits de groupes</a></li>
+                <li><a href="#">La société en quelques thèmes</a></li>
+                <li><a href="#">Outils pédagogiques</a></li>
+                <li><a href="#">Statistiques en ligne</a></li>
+                <li><a href="#">Obtention de micro-données</a></li>
               </ul>
             </li>
-            <li><a href="#search">Rechercher sur le site</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collecter<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="/collecter">Quelle est cette rubrique ?</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Les instruments de collecte</a></li>
+                <li><a href="#">Les outils de codification</a></li>
+                <li><a href="#">La création des agrégats complémentaires</a></li>
+                <li><a href="#">La création de rubriques ad-hoc de profession</a></li>
+                <li><a href="#">L’utilisation de versions antérieures ou d’autres nomenclatures</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collecter<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header"><a href="/apropos">Qui sommes-nous ?</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </li>
+            <li><a href="#search">Rechercher</a></li>
           </ul>
 
 
@@ -116,37 +147,48 @@
       <div class="footer">
         <div class="container">
     <div class="row-footer">
-            <div class="col-xs-3">
+            <div class="col-xs-2">
                 <ul class="list-unstyled">
-                    <li><a href="/discover/"><i class="fa fa-github"></i>Découvrir la PCS</a><li>
-                    <li><a href="/discover/history/">Histoire</a></li>
-                    <li><a href="/discover/guides/">Guides de documentation</a></li>
+                    <li><a href="/decouvrir/"><i class="fa fa-github"></i> Découvrir la PCS</a><li>
+                    <li><a href="/decouvrir/histoire/">Histoire</a></li>
+                    <li><a href="/decouvrir/guides/">Guides de documentation</a></li>
                     <li><a href="#">Nomenclatures françaises</a></li>
                     <li><a href="#">Nomenclatures étrangères</a></li>
                 </ul>
             </div>
             <div class="col-xs-3">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-archive"></i> Projects<li>
-                    <li><a href="#">Project jhvbj</a></li>
-                    <li><a href="#">Project 2</a></li>
-                    <li><a href="#">Project 3</a></li>
+                    <li><a href="/explorer"><i class="fa fa-archive"></i> Explorer la PCS</a><li>
+                    <li><a href="#">Les classes et sous-classes d'emploi</a></li>
+                    <li><a href="#">Les groupes (et sous-groupes) de ménages</a></li>
+                    <li><a href="#">Les rubriques ad-hoc de professions</a></li>
+                    <li><a href="#">Les professions du numérique</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <ul class="list-unstyled">
+                    <li><a href="/decrire"><i class="fa fa-cogs"></i> Décrire</a><li>
+                    <li><a href="#">Portraits de groupes</a></li>
+                    <li><a href="#">La société en quelques thèmes</a></li>
+                    <li><a href="#">Outils pédagogiques</a></li>
+                    <li><a href="#">Statistiques en ligne</a></li>
+                    <li><a href="#">Obtention de micro-données</a></li>
                 </ul>
             </div>
             <div class="col-xs-3">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-cogs"></i> Services<li>
-                    <li><a href="#">WOUHOU</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Presentations</a></li>
+                    <li><a href="/collecter"><i class="fa fa-file-text"></i> Collecter, coder</a><li>
+                    <li><a href="#">Les instruments de collecte</a></li>
+                    <li><a href="#">Les outils de codification</a></li>
+                    <li><a href="#">La création des agrégats complémentaires</a></li>
+                    <li><a href="#">La création de rubriques ad-hoc de profession</a></li>
+                    <li><a href="#">L’utilisation de versions antérieures ou d’autres nomenclatures</a></li>
                 </ul>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-2">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-file-text"></i> Documentation<li>
-                    <li><a href="#">YEAH MAN</a></li>
-                    <li><a href="#">API Docs</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li><a href="/apropos"><i class="fa fa-file-text"></i> A propos</a><li>
+                    <li><a href="#">Contacts</a></li>
                 </ul>
             </div>
     </div>
