@@ -24,7 +24,7 @@ Pour lancer le serveur pour la première fois :
     cd PCS_Site/
     bundle exec jekyll serve
     
-Vous pouvez ensuite lancer le serveur avec la commande
+Vous pouvez ensuite lancer le serveur, toujours dans le dossier PCS_Site/, avec la commande
     
     jekyll serve
     
