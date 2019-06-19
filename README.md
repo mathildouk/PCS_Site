@@ -1,11 +1,11 @@
 # Site en bêta pour les Professions et catégories socioprofessionnelles
 
-Présentation
+## Présentation
 ================================================================
 
 Ce site est une version bêta d'un site pour la PCS. Il est généré sous Jekyll qui est une générateur de site static dévellopé sous Ruby.
 
-Installation de l'environnement
+## Installation de l'environnement
 ================================================================
 
 ### - Installation de Ruby
@@ -16,7 +16,7 @@ Vous pouvez suivre le guide d'installation présent sur ce site (https://jekyllr
 
     gem install jekyll bundler
 
-Lancement du serveur
+## Lancement du serveur
 ================================================================
 
 Pour lancer le serveur pour la première fois :
